@@ -20,5 +20,7 @@ module.exports = {
           process.env.OPENSHIFT_MONGODB_DB_URL +
           process.env.OPENSHIFT_APP_NAME ||
           'mongodb://13.91.6.229/ecuadorayudaweb'
-  }
+  },
+  // Seed database on startup
+  seedDB: true
 };

@@ -1,0 +1,87 @@
+<div class='container '>
+<header>
+  <h1>Agregar un nuevo lugar</h1>
+  <br>
+</header>
+<form  name="form"  class='form-horizontal ' ng-submit="lugarctl.submit(form)" novalidate>
+  <div class='form-group'>
+    <label for='name' class="col-sm-2 control-label">Nombre</label>
+    <div class="col-sm-10">
+      <input type='text' id="name" class='form-control input-lg' placeholder='Nombre' ng-model="lugarctl.place.name">
+    </div>
+  </div>
+
+  <div class='form-group'>
+    <label for='name' class="col-sm-2 control-label">Latitud</label>
+    <div class="col-sm-10">
+      <input type='number' id="name" class='form-control input-lg' placeholder='latitud' ng-model="lugarctl.place.loc.type[1]">
+    </div>
+  </div>
+
+  <div class='form-group'>
+    <label for='name' class="col-sm-2 control-label">Longitud</label>
+    <div class="col-sm-10">
+      <input type='number' id="name" class='form-control input-lg' placeholder='longitud' ng-model="lugarctl.place.loc.type[0]">
+    </div>
+  </div>
+
+  <div class='form-group'>
+    <label for='name' class="col-sm-2 control-label">Qué se necesita</label>
+    <div class="col-sm-offset-2 col-sm-10">
+
+      <div class="checkbox" ng-repeat="need in lugarctl.needs">
+        <label>
+          <img src="" ng-src="need.image" alt="{{need.name}}"/>
+          <input type="checkbox" value="" ng-model="need.state">
+          {{need.name}}
+          <br>
+          <textarea name="detail" class="form-control" rows="8" cols="40" ng-show="need.state" ng-model="need.detail"></textarea>
+        </label>
+      </div>
+
+    </div>
+  </div>
+
+  <div class='form-group'>
+    <label for='name' class="col-sm-2 control-label">Cómo llegar</label>
+    <div class="col-sm-10">
+      <textarea name="llegar" class="form-control" rows="8" cols="40" ng-model="lugarctl.place.htgo"></textarea>
+    </div>
+  </div>
+
+  <div class='form-group'>
+    <label class="col-sm-2 control-label">A dónde ir</label>
+    <div class="row col-sm-10">
+      <div class="col col-sm-4 place" ng-repeat="place in lugarctl.safeplaces">
+        <input type='text' class='form-control input-md' placeholder='Nombre' ng-model="place.name">
+        <br>
+        <input type='tel' class='form-control input-md' placeholder='Telefono' ng-model="place.tel">
+        <br>
+        <input type='text' class='form-control input-sm c' placeholder='Lat' ng-model="place.loc.type[1]">
+        <input type='text' class='form-control input-sm c' placeholder="Long" ng-model="place.loc.type[0]">
+        <div class="clearfix visible-xs-block"></div>
+
+      </div>
+
+      <div class="clearfix visible-xs-block"></div>
+      <div class='btn btn-lg btn-default' ng-click="lugarctl.addBarebone()">
+        Agregar</div>
+    </div>
+
+  </div>
+
+  <button type='submit' class='btn btn-lg btn-default pull-right'>Enviar
+  </button>
+
+</form>
+
+<div class='row '>
+
+  <div class="col col-sm-3" ng-repeat="place in lugarctl.places">
+    <h3>{{place.name}}</h3>
+    <a href="#" ui-sref="^.edit({id: '{{place._id}}'})">editar</a>
+  </div>
+
+</div>
+
+</div>
