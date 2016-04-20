@@ -30,7 +30,8 @@
       console.log("pushed!");
       this.safeplaces.push({
         name: "",
-        telf: null,
+        tel: null,
+        extra: "",
         lat: null,
         long: null
       });
