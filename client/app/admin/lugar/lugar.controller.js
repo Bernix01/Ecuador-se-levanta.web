@@ -31,9 +31,7 @@
       this.safeplaces.push({
         name: "",
         tel: null,
-        extra: "",
-        lat: null,
-        long: null
+        extra: ""
       });
     }
 
