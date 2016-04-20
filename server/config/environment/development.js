@@ -6,7 +6,7 @@ module.exports = {
 
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://104.42.239.15/ecuadorayudaweb-dev'
+    uri: 'mongodb://13.91.6.229/ecuadorayudaweb-dev'
   },
 
   // Seed database on startup

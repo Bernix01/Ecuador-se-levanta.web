@@ -19,6 +19,6 @@ module.exports = {
           process.env.MONGOHQ_URL ||
           process.env.OPENSHIFT_MONGODB_DB_URL +
           process.env.OPENSHIFT_APP_NAME ||
-          'mongodb://104.42.239.15/ecuadorayudaweb'
+          'mongodb://13.91.6.229/ecuadorayudaweb'
   }
 };
