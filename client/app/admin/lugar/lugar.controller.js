@@ -39,6 +39,7 @@
       if (form.$valid) {
         this.place.wtgo = this.safeplaces;
         this.place.needs = this.needs;
+        console.log(this.place);
         if(this._id){
           this.$http.put('/api/places/'+this._id, this.place).then(response => {
             alert("Listo! :-)");
