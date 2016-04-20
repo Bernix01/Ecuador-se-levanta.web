@@ -25,6 +25,7 @@ var PlaceSchema = new _mongoose2.default.Schema({
   wtgo: [{
     name: String,
     tel: String,
+    extra: String,
     loc: {
       type: [Number], // [<longitude>, <latitude>]
       index: '2d' // create the geospatial index
