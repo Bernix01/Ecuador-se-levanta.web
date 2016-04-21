@@ -10,5 +10,12 @@ var PlaceSchema = new mongoose.Schema({
   wtgo:[],
   htgo: { type: String, default: '' }
 });
-
+PlaceSchema.pre("save", function(next) {
+    var self = this;
+console.log(this.wtgo);
+return next();
+});
+PlaceSchema.post("save", function(doc) {
+console.log(doc.wtgo);
+});
 export default mongoose.model('Place', PlaceSchema);

@@ -20,10 +20,15 @@ function respondWithResult(res, statusCode) {
     }
   };
 }
+function customizer(objValue, srcValue) {
+  if (_.isArray(objValue)) {
+    return srcValue;
+  }
+}
 
 function saveUpdates(updates) {
   return function(entity) {
-    var updated = _.merge(entity, updates);
+    var updated = _.mergeWith(entity, updates, customizer);
     return updated.save()
       .then(updated => {
         return updated;
@@ -86,6 +91,7 @@ export function update(req, res) {
   if (req.body._id) {
     delete req.body._id;
   }
+  console.log(res.body);
   return Place.findById(req.params.id).exec()
     .then(handleEntityNotFound(res))
     .then(saveUpdates(req.body))

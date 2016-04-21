@@ -36,10 +36,15 @@ function respondWithResult(res, statusCode) {
     }
   };
 }
+function customizer(objValue, srcValue) {
+  if (_lodash2.default.isArray(objValue)) {
+    return srcValue;
+  }
+}
 
 function saveUpdates(updates) {
   return function (entity) {
-    var updated = _lodash2.default.merge(entity, updates);
+    var updated = _lodash2.default.mergeWith(entity, updates, customizer);
     return updated.save().then(function (updated) {
       return updated;
     });
@@ -93,6 +98,7 @@ function update(req, res) {
   if (req.body._id) {
     delete req.body._id;
   }
+  console.log(res.body);
   return _place2.default.findById(req.params.id).exec().then(handleEntityNotFound(res)).then(saveUpdates(req.body)).then(respondWithResult(res)).catch(handleError(res));
 }
 
