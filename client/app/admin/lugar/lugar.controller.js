@@ -10,23 +10,16 @@
       this.appConfig = appConfig;
       this.place = {};
       this.place.wtgo = [];
-      $scope.$on('$destroy', function() {
-        socket.unsyncUpdates('places');
-        socket.unsyncUpdates('place');
-      });
     }
     $onInit() {
       this.$http.get('/api/places').then(response => {
         this.places = response.data;
-        this.socket.syncUpdates('places', this.places);
       });
       if (this._id) {
         var self = this;
         this.$http.get('/api/places/' + this._id).then(response => {
           this.place = response.data;
-          this.socket.syncUpdates('place', this.place, (event, oldPlace, newPlace) => {
-            this.place = newPlace;
-          });
+
         },function(data, status) {
           self.$state.go('^.lugarAdm');
         });
