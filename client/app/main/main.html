@@ -9,14 +9,18 @@
       <h3>Lugares</h3>
       <hr>
       <a href="#" ng-repeat="place in vm.places" ui-sref="main.lugar({id:'{{place._id}}'})">{{place.name}}</a>
-<hr>
-<a href="#" ui-sref="main.ayudaextranjera"><strong>AYUDA EXTRANJERA</strong></a>
-<hr>
-<a href="#" ui-sref="main.tips"><strong>Tips</strong></a>
+      <hr>
+      <a href="#" ui-sref="main.ayudaextranjera">
+        <strong>AYUDA EXTRANJERA</strong>
+      </a>
+      <hr>
+      <a href="#" ui-sref="main.tips">
+        <strong>Tips</strong>
+      </a>
     </div>
 
     <div class="col col-sm-8 col-md-9 col-lg-10 cnt">
-      <div ui-view></div>
+      <div ui-view="main.servicios"></div>
     </div>
   </div>
 </div>
