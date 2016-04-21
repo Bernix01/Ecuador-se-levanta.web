@@ -5,6 +5,7 @@ angular.module('ecuadorAyudaWebApp.admin')
     $stateProvider
       .state('admin', {
         url: '/admin',
+        abstract:true,
         templateUrl: 'app/admin/admin.html',
         authenticate: 'admin'
       });

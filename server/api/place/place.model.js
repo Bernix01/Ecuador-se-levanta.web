@@ -4,10 +4,8 @@ import mongoose from 'mongoose';
 
 var PlaceSchema = new mongoose.Schema({
   name: String,
-  loc: {
-    type: [Number],  // [<longitude>, <latitude>]
-    index: '2d'      // create the geospatial index
-  },
+  lat: Number,
+  long: Number,
   needs: [{
     name:String,
     image: String,
@@ -18,10 +16,8 @@ var PlaceSchema = new mongoose.Schema({
     name: String,
     tel: String,
     extra: String,
-    loc: {
-      type: [Number],  // [<longitude>, <latitude>]
-      index: '2d'      // create the geospatial index
-    }
+    lat: Number,
+    long: Number
   }],
   htgo: String
 });

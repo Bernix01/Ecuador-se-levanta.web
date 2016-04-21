@@ -9,8 +9,8 @@ angular.module('ecuadorAyudaWebApp')
         authenticate: 'admin'
       });
       $stateProvider
-      .state('admin.edit', {
-        url: '/edit/:id',
+      .state('admin.editPlace', {
+        url: '/lugar/edit/:id',
         template: '<lugaradm></lugaradm>',
         authenticate: 'admin'
       });

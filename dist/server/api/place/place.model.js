@@ -12,10 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var PlaceSchema = new _mongoose2.default.Schema({
   name: String,
-  loc: {
-    type: [Number], // [<longitude>, <latitude>]
-    index: '2d' // create the geospatial index
-  },
+  lat: Number,
+  long: Number,
   needs: [{
     name: String,
     image: String,
@@ -26,10 +24,8 @@ var PlaceSchema = new _mongoose2.default.Schema({
     name: String,
     tel: String,
     extra: String,
-    loc: {
-      type: [Number], // [<longitude>, <latitude>]
-      index: '2d' // create the geospatial index
-    }
+    lat: Number,
+    long: Number
   }],
   htgo: String
 });

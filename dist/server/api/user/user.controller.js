@@ -90,7 +90,7 @@ function show(req, res, next) {
  */
 function destroy(req, res) {
   return _user2.default.findByIdAndRemove(req.params.id).exec().then(function () {
-    res.status(204).end();
+    return res.status(204).end();
   }).catch(handleError(res));
 }
 
@@ -106,7 +106,7 @@ function changePassword(req, res, next) {
     if (user.authenticate(oldPass)) {
       user.password = newPass;
       return user.save().then(function () {
-        res.status(204).end();
+        return res.status(204).end();
       }).catch(validationError(res));
     } else {
       return res.status(403).end();
@@ -125,7 +125,7 @@ function me(req, res, next) {
     if (!user) {
       return res.status(401).end();
     }
-    res.json(user);
+    return res.json(user);
   }).catch(function (err) {
     return next(err);
   });
