@@ -12,11 +12,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var PlaceSchema = new _mongoose2.default.Schema({
   name: String,
-  lat: { type: Number, default: 0 },
-  long: { type: Number, default: 0 },
+  lat: {
+    type: Number,
+    default: 0
+  },
+  long: {
+    type: Number,
+    default: 0
+  },
   needs: [],
   wtgo: [],
-  htgo: { type: String, default: '' }
+  htgo: {
+    type: String,
+    default: ''
+  }
 });
 PlaceSchema.pre("save", function (next) {
   var self = this;

@@ -20,6 +20,7 @@ function respondWithResult(res, statusCode) {
     }
   };
 }
+
 function customizer(objValue, srcValue) {
   if (_.isArray(objValue)) {
     return srcValue;
@@ -91,7 +92,6 @@ export function update(req, res) {
   if (req.body._id) {
     delete req.body._id;
   }
-  console.log(res.body);
   return Place.findById(req.params.id).exec()
     .then(handleEntityNotFound(res))
     .then(saveUpdates(req.body))

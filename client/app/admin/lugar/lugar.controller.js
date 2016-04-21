@@ -18,8 +18,6 @@
         var self = this;
         this.$http.get('/api/places/' + this._id).then(response => {
           this.place = response.data;
-          console.log("original");
-          console.log(this.place);
         },function(data, status) {
           self.$state.go('^.lugarAdm');
         });
@@ -36,7 +34,6 @@
         lat: "",
         long: ""
       });
-        console.log(this.place.wtgo);
     }
 
     delete() {
@@ -52,10 +49,8 @@
     submit(form) {
       if (form.$valid) {
         if (this._id) {
-          console.log(this.place.wtgo);
           this.$http.put('/api/places/' + this._id, this.place).then(response => {
             alert("Actualizado! :-)");
-            console.log(response.data);
           });
         } else {
           this.$http.post('/api/places', this.place).then(response => {

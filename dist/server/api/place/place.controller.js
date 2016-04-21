@@ -36,6 +36,7 @@ function respondWithResult(res, statusCode) {
     }
   };
 }
+
 function customizer(objValue, srcValue) {
   if (_lodash2.default.isArray(objValue)) {
     return srcValue;
@@ -98,7 +99,6 @@ function update(req, res) {
   if (req.body._id) {
     delete req.body._id;
   }
-  console.log(res.body);
   return _place2.default.findById(req.params.id).exec().then(handleEntityNotFound(res)).then(saveUpdates(req.body)).then(respondWithResult(res)).catch(handleError(res));
 }
 
