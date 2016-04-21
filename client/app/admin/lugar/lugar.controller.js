@@ -8,6 +8,7 @@
       this.$http = $http;
       this.appConfig = appConfig;
       this.place = {};
+      this.place.wtgo = [];
       $scope.$on('$destroy', function() {
         socket.unsyncUpdates('places');
         socket.unsyncUpdates('place');
@@ -26,7 +27,7 @@
           });
         });
       } else {
-        this.needs = this.appConfig.needs;
+        this.place.needs = this.appConfig.needs;
       }
     }
 
