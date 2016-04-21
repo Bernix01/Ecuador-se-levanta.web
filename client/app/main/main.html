@@ -1,29 +1,18 @@
-
-  <div class="himage">
-  </div>
-
+<div class="himage"></div>
 <div class='container'>
-
   <div class='row '>
-
-
-    <div class="col col-md-4 menu">
+    <div class="col col-sm-4 col-md-3 col-lg-2 menu">
       <h3>Qué se ofrece</h3>
       <hr>
       <a href="#">Servicios</a>
       <a href="#">Proveedores</a>
       <h3>Lugares</h3>
-          <hr>
-          <a href="#" >Servicios</a>
+      <hr>
+      <a href="#" ng-repeat="place in vm.places" ui-sref="main.lugar({id:'{{place._id}}'})">{{place.name}}</a>
     </div>
 
-    <div class="col col-md-8 cnt">
-      <div ui-view="ofrecen">
-
-      </div>
+    <div class="col col-sm-8 col-md-9 col-lg-10 cnt">
+      <div ui-view></div>
     </div>
   </div>
-
-
-
 </div>

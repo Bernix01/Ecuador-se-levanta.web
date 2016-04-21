@@ -1,10 +1,23 @@
-.himage{
+.himage {
   background-image: url('../assets/images/header.jpg');
   height: 55%;
   height: 55vh;
   background-position: center;
   background-size: cover;
   position: relative;
+  margin-bottom: 2em;
   width: 100%;
-  
+}
+.menu {
+  text-align: right;
+  text-transform: uppercase;
+  a {
+    display: block;
+    color: #000;
+    margin-bottom: 1em;
+    text-decoration: none;
+    &:hover {
+      color: rgb(154, 154, 154);
+    }
+  }
 }

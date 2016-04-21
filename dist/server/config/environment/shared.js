@@ -33,6 +33,11 @@ exports = module.exports = {
     state: false,
     detail: '',
     image: 'assets/images/ropa.png'
+  }, {
+    name: 'Mascotas',
+    state: false,
+    detail: '',
+    image: 'assets/images/animales.png'
   }]
 };
 //# sourceMappingURL=shared.js.map

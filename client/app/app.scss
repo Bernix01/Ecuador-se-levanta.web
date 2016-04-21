@@ -35,8 +35,23 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 
 body{
   font-family: 'Avenir Next';
+    letter-spacing: .1em;
 }
-
+h1{
+	font-size: 56px;
+}
+h2{
+    margin-top: 40px;
+}
+h3{
+	font-weight: bold;
+}
+hr {
+    margin-top: 0;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 2px solid #000000;
+}
 // Component styles are injected through grunt
 /* inject:scss */
 @import 'admin/admin.scss';

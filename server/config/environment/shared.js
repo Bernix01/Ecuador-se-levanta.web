@@ -42,7 +42,12 @@ exports = module.exports = {
       detail: '',
       image: 'assets/images/ropa.png'
     },
-
+    {
+      name: 'Mascotas',
+      state: false,
+      detail: '',
+      image: 'assets/images/animales.png'
+    }
 
   ]
 };
