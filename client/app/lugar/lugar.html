@@ -22,7 +22,7 @@
   </div>
 
 </div>
-  <div class='row '>
+  <div class='row needs'>
     <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 '>
 
       <h2>QUÉ SE NECESITA</h2>
@@ -30,7 +30,7 @@
     </div>
       <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 ' ng-show="need.state" ng-repeat="need in vm.place.needs">
       <img src="" class="pull-left ndicn" ng-src="{{need.image}}" alt="{{need.mane}}" />
-        <h4>{{need.name}}</h4>
+        <h4><strong>{{need.name}}</strong></h4>
         <p>
           {{need.detail}}
         </p>
