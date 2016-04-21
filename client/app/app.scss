@@ -49,10 +49,14 @@ hr {
 @import 'admin/admin.scss';
 @import 'admin/lugar/lugar.scss';
 @import 'admin/ofrecen/ofrecen.scss';
+@import 'ayuda-extranjera/ayuda-extranjera.scss';
 @import 'directives/add-safe-place/add-safe-place.scss';
 @import 'lugar/lugar.scss';
 @import 'main/main.scss';
 @import 'ofrecen/ofrecen.scss';
+@import 'ofrecen/proveedores/proveedores.scss';
+@import 'ofrecen/servicios/servicios.scss';
+@import 'tips/tips.scss';
 @import '../components/footer/footer.scss';
 @import '../components/modal/modal.scss';
 /* endinject */

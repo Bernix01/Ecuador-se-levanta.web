@@ -16,5 +16,6 @@ angular.module('ecuadorAyudaWebApp', [
     $urlRouterProvider
       .otherwise('/');
     $urlRouterProvider.when('/admin', '/admin/lugar');
+  $urlRouterProvider.when('/ofrecen', '/ofrecen/servicios');
     $locationProvider.html5Mode(true);
   });
