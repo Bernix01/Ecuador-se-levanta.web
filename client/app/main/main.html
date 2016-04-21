@@ -1,20 +1,22 @@
-<div class="himage"></div>
+<div class="himage">
+  <i class="fa fa-2x visible-xs hamburguer" ng-class="n ? 'fa-times':'fa-bars'" ng-click="n = !n"></i>
+</div>
 <div class='container'>
   <div class='row '>
-    <div class="col col-sm-4 col-md-3 col-lg-2 menu">
+    <div class="col col-sm-4 col-md-3 col-lg-2 menu" ng-class="{open: n}">
       <h3>Qué se ofrece</h3>
       <hr>
-      <a href="#" ui-sref="main.servicios">Servicios</a>
-      <a href="#" ui-sref="main.proveedores">Proveedores</a>
+      <a href="#" ui-sref="main.servicios" ng-click="n = false">Servicios</a>
+      <a href="#" ui-sref="main.proveedores" ng-click="n = false">Proveedores</a>
       <h3>Lugares</h3>
       <hr>
-      <a href="#" ng-repeat="place in vm.places" ui-sref="main.lugar({id:'{{place._id}}'})">{{place.name}}</a>
+      <a href="#" ng-repeat="place in vm.places" ng-click="$parent.n = false" ui-sref="main.lugar({id:'{{place._id}}'})">{{place.name}}</a>
       <hr>
-      <a href="#" ui-sref="main.ayudaextranjera">
+      <a href="#" ui-sref="main.ayudaextranjera" ng-click="n = false">
         <strong>AYUDA EXTRANJERA</strong>
       </a>
       <hr>
-      <a href="#" ui-sref="main.tips">
+      <a href="#" ui-sref="main.tips" ng-click="n = false">
         <strong>Tips</strong>
       </a>
     </div>
