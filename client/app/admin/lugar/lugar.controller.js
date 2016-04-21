@@ -2,8 +2,9 @@
 (function() {
 
   class LugarComponent {
-    constructor($http, $scope, socket, appConfig, $stateParams) {
+    constructor($http, $scope, socket, appConfig, $stateParams, $state) {
       this._id = $stateParams.id;
+      this.$state = $state;
       this.socket = socket;
       this.$http = $http;
       this.appConfig = appConfig;
@@ -20,11 +21,14 @@
         this.socket.syncUpdates('places', this.places);
       });
       if (this._id) {
-        this.$http.get('/api/places/'+this._id).then(response => {
+        var self = this;
+        this.$http.get('/api/places/' + this._id).then(response => {
           this.place = response.data;
           this.socket.syncUpdates('place', this.place, (event, oldPlace, newPlace) => {
             this.place = newPlace;
           });
+        },function(data, status) {
+          self.$state.go('^.lugarAdm');
         });
       } else {
         this.place.needs = this.appConfig.needs;
@@ -32,7 +36,6 @@
     }
 
     addBarebone() {
-      console.log("pushed!");
       this.place.wtgo.push({
         name: "",
         tel: null,
@@ -40,6 +43,12 @@
       });
     }
 
+    delete() {
+      this.$http.delete("/api/places/" + this._id).then(response => {
+        alert("Deleted!");
+        this.$state.go('^.lugarAdm');
+      });
+    }
     remove(place) {
       var index = this.place.wtgo.indexOf(place);
       this.place.wtgo.splice(index, 1);

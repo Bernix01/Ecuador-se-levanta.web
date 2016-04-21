@@ -1,9 +1,11 @@
 <div ng-show="vm.place">
 <h1>{{vm.place.name}}</h1>
-<h2>CÓMO LLEGAR<i class="fa fa-map-marker pull-right"></i></h2>
-<p>
-  {{vm.place.htgo}}
-</p>
+<div ng-show="vm.place.htgo">
+  <h2>CÓMO LLEGAR<i class="fa fa-map-marker pull-right"></i></h2>
+  <p>
+    {{vm.place.htgo}}
+  </p>
+</div>
 <h2>DÓNDE IR</h2>
 <h4>(Centros de Acopio o recepción de donaciones)</h4>
 <div class='row '>
