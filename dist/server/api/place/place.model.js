@@ -12,22 +12,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var PlaceSchema = new _mongoose2.default.Schema({
   name: String,
-  lat: Number,
-  long: Number,
+  lat: { type: Number, default: 0 },
+  long: { type: Number, default: 0 },
   needs: [{
     name: String,
     image: String,
-    detail: String,
+    detail: { type: String, default: '' },
     state: Boolean
   }],
   wtgo: [{
     name: String,
-    tel: String,
-    extra: String,
-    lat: Number,
-    long: Number
+    tel: { type: String, default: '' },
+    extra: { type: String, default: '' },
+    lat: { type: Number, default: 0 },
+    long: { type: Number, default: 0 }
   }],
-  htgo: String
+  htgo: { type: String, default: '' }
 });
 
 exports.default = _mongoose2.default.model('Place', PlaceSchema);
