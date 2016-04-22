@@ -3,7 +3,7 @@
 angular.module('ecuadorAyudaWebApp')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('main.tips', {
+      .state('tips', {
         url: 'tips',
         template: '<tips></tips>'
       });
