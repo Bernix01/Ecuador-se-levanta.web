@@ -14,7 +14,7 @@
     position: fixed;
   }
 }
-.hamburguer{
+.hamburguer {
   padding: 1em 15px;
   color: #fff;
 }
@@ -42,12 +42,22 @@
     margin-top: 15vh;
   }
 }
-.open{
+.open {
   left: 0;
 }
 .cnt {
   @media (max-width:$screen-xs-max) {
     margin-top: 16%;
     margin-top: 16vh;
+  }
+}
+.navbar-default {
+  min-height: 90px;
+  text-transform: uppercase;
+  background-color: #fff;
+  .navbar-brand {
+    img {
+      height: 60px;
+    }
   }
 }
