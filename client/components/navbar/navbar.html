@@ -11,18 +11,6 @@
     </div>
     <div uib-collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="#" ui-sref="main.quienesomos">Quienes somos</a>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" id="centros" uib-dropdown-toggle>Centros de acopio</a>
-          <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="centros">
-            <li ng-repeat="place in vm.places">
-              <a href="#" ng-repeat="place in vm.places" ng-click="$parent.n = false" ui-sref="main.lugar({id:'{{place._id}}'})">{{place.name}}</a>
-            </li>
-          </ul>
-        </li>
-        <li>
         <li ng-repeat="item in nav.menu" ui-sref-active="active">
             <a ui-sref="{{item.state}}">{{item.title}}</a>
         </li>

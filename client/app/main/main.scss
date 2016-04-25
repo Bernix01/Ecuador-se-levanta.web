@@ -5,59 +5,54 @@
   background-position: center;
   background-size: cover;
   position: relative;
-  margin-bottom: 2em;
-  z-index: 99;
   width: 100%;
   @media (max-width:$screen-xs-max) {
     height: 15%;
     height: 15vh;
-    position: fixed;
   }
 }
-.hamburguer {
-  padding: 1em 15px;
-  color: #fff;
-}
-.menu {
-  text-align: right;
-  text-transform: uppercase;
-  a {
-    display: block;
-    color: #000;
-    margin-bottom: 1em;
-    text-decoration: none;
-    &:hover {
-      color: rgb(154, 154, 154);
+.main-menu {
+  transform: translateY(-50%);
+  .col {
+    text-align: center;
+    a {
+      img {
+        border-radius: 50%;
+        max-width: 100%;
+      }
     }
-  }
-  @media (max-width:$screen-xs-max) {
-    position: fixed;
-    background: white;
-    width: 100%;
-    z-index: 9;
-    left: -100%;
-    height: 85%;
-    height: 85vh;
-    margin-top: 15%;
-    margin-top: 15vh;
-  }
-}
-.open {
-  left: 0;
-}
-.cnt {
-  @media (max-width:$screen-xs-max) {
-    margin-top: 16%;
-    margin-top: 16vh;
   }
 }
 .navbar-default {
   min-height: 90px;
   text-transform: uppercase;
+  margin-bottom: 0;
   background-color: #fff;
+  .navbar-header {
+    min-height: 90px;
+  }
+  .navbar-collapse {
+    border-top: 0;
+  }
   .navbar-brand {
     img {
       height: 60px;
+    }
+  }
+  .navbar-nav {
+    > li {
+      > a {
+        padding-top: 35px;
+        padding-bottom: 35px;
+      }
+    }
+    .active {
+       > a,
+       > a:hover,
+      > a:focus {
+        color: #000;
+        background-color: initial;
+      }
     }
   }
 }
