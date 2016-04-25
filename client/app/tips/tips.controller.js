@@ -8,7 +8,7 @@ class TipsComponent {
 }
 
 angular.module('ecuadorAyudaWebApp')
-  .component('tips', {
+  .component('recomendaciones', {
     templateUrl: 'app/tips/tips.html',
     controller: TipsComponent
   });

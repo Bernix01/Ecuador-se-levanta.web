@@ -3,12 +3,6 @@
 class NavbarController {
   //start-non-standard
   menu = [{
-    'title': 'Emergencia',
-    'state': 'main'
-  }, {
-    'title': 'Reconstrucción',
-    'state': 'tips'
-  }, {
     'title': 'Recomendaciones',
     'state': 'tips'
   }];

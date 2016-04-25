@@ -1,14 +1,14 @@
 .himage {
   background-image: url('../assets/images/header.jpg');
-  height: 35%;
-  height: 35vh;
+  height: 55%;
+  height: 55vh;
   background-position: center;
   background-size: cover;
   position: relative;
   width: 100%;
   @media (max-width:$screen-xs-max) {
-    height: 15%;
-    height: 15vh;
+    height: 35%;
+    height: 35vh;
   }
 }
 .main-menu {
@@ -21,6 +21,11 @@
         max-width: 100%;
       }
     }
+    .active{
+      img{
+        filter: drop-shadow(0 0 1px #eee);
+      }
+    }
   }
 }
 .navbar-default {
@@ -28,6 +33,7 @@
   text-transform: uppercase;
   margin-bottom: 0;
   background-color: #fff;
+  border-bottom: 0;
   .navbar-header {
     min-height: 90px;
   }

@@ -3,9 +3,8 @@
 angular.module('ecuadorAyudaWebApp')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('main.ofrecen', {
-        url: '/ofrecen',
-        abstract: true,
-        template: '<ofrecen></ofrecen>'
+      .state('main.donar.centros', {
+        url: '/centros',
+        template: '<centros></centros>'
       });
   });

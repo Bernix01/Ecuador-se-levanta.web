@@ -3,8 +3,8 @@
 angular.module('ecuadorAyudaWebApp')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('main.servicios', {
-        url: 'ofrecen/servicios',
-        template: '<servicios></servicios>'
+      .state('main.donar', {
+        url: 'donar',
+        template: '<donar></donar>'
       });
   });
