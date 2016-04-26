@@ -4,22 +4,12 @@
 
   class MainController {
 
-    constructor($http, $scope, socket) {
-      this.$http = $http;
-      this.socket = socket;
-      this.places = [];
+    constructor() {
 
-      $scope.$on('$destroy', function() {
-        socket.unsyncUpdates('places');
-      });
+      
     }
 
-    $onInit() {
-      this.$http.get('/api/places').then(response => {
-        this.places = response.data;
-        this.socket.syncUpdates('places', this.places);
-      });
-    }
+
   }
   angular.module('ecuadorAyudaWebApp')
     .component('main', {

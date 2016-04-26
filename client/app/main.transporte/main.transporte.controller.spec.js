@@ -1,16 +1,16 @@
 'use strict';
 
-describe('Component: ServiciosComponent', function () {
+describe('Component: MainTransporteComponent', function () {
 
   // load the controller's module
   beforeEach(module('ecuadorAyudaWebApp'));
 
-  var ServiciosComponent, scope;
+  var MainTransporteComponent, scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($componentController, $rootScope) {
     scope = $rootScope.$new();
-    ServiciosComponent = $componentController('ServiciosComponent', {
+    MainTransporteComponent = $componentController('MainTransporteComponent', {
       $scope: scope
     });
   }));

@@ -1,7 +1,7 @@
 'use strict';
 (function(){
 
-class ServiciosComponent {
+class DonarServiciosComponent {
   constructor() {
     this.message = 'Hello';
   }
@@ -9,8 +9,8 @@ class ServiciosComponent {
 
 angular.module('ecuadorAyudaWebApp')
   .component('servicios', {
-    templateUrl: 'app/ofrecen/servicios/servicios.html',
-    controller: ServiciosComponent
+    templateUrl: 'app/donar.servicios/donar.servicios.html',
+    controller: DonarServiciosComponent
   });
 
 })();

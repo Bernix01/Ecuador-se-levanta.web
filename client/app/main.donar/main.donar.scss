@@ -1,0 +1,13 @@
+.menu {
+  text-align: right;
+  text-transform: uppercase;
+  a {
+    display: block;
+    color: #000;
+    margin-bottom: 1em;
+    text-decoration: none;
+    &:hover {
+      color: rgb(154, 154, 154);
+    }
+  }
+}
