@@ -27,13 +27,5 @@ var PlaceSchema = new _mongoose2.default.Schema({
     default: ''
   }
 });
-PlaceSchema.pre("save", function (next) {
-  var self = this;
-  console.log(this.wtgo);
-  return next();
-});
-PlaceSchema.post("save", function (doc) {
-  console.log(doc.wtgo);
-});
 exports.default = _mongoose2.default.model('Place', PlaceSchema);
 //# sourceMappingURL=place.model.js.map

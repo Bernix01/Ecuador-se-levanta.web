@@ -7,7 +7,7 @@ module.exports = {
 
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://13.91.6.229/ecuadorayudaweb-dev'
+    uri: process.env.DB_URI_DEV
   },
 
   // Seed database on startup
