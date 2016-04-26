@@ -36,7 +36,7 @@ describe('Place API:', function() {
         .post('/api/places')
         .send({
           name: 'New Place',
-          info: 'This is the brand new place!!!'
+          htgo: 'This is the brand new place!!!'
         })
         .expect(201)
         .expect('Content-Type', /json/)
@@ -51,7 +51,7 @@ describe('Place API:', function() {
 
     it('should respond with the newly created place', function() {
       newPlace.name.should.equal('New Place');
-      newPlace.info.should.equal('This is the brand new place!!!');
+      newPlace.htgo.should.equal('This is the brand new place!!!');
     });
 
   });
@@ -92,7 +92,7 @@ describe('Place API:', function() {
         .put('/api/places/' + newPlace._id)
         .send({
           name: 'Updated Place',
-          info: 'This is the updated place!!!'
+          htgo: 'This is the updated place!!!'
         })
         .expect(200)
         .expect('Content-Type', /json/)
@@ -111,7 +111,7 @@ describe('Place API:', function() {
 
     it('should respond with the updated place', function() {
       updatedPlace.name.should.equal('Updated Place');
-      updatedPlace.info.should.equal('This is the updated place!!!');
+      updatedPlace.htgo.should.equal('This is the updated place!!!');
     });
 
   });
