@@ -12,5 +12,10 @@ before_script:
 services: mongodb
 deploy:
   provider: azure_web_apps
+  site: 'ecuadorayuda'
   on:
      branch: release
+  provider: azure_web_apps
+  site: 'ecuadorayuda-dev'
+  on:
+     branch: dev
