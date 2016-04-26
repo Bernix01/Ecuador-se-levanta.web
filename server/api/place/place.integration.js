@@ -9,7 +9,7 @@ var newPlace;
 describe('Place API:', function() {
 
   before(function() {
-    return User.remove().then(function() {
+    return Place.remove().then(function() {
       newPlace = new Place({
         name: 'New Place',
         htgo: 'This is the brand new place!!!'
@@ -19,7 +19,7 @@ describe('Place API:', function() {
     });
   });
 
-  // Clear users after testing
+  // Clear palces after testing
   after(function() {
     return Place.remove();
   });
