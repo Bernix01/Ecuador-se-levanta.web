@@ -1,16 +1,22 @@
 .menu {
-  text-align: right;
   text-transform: uppercase;
+  padding-left: 1em;
   a {
     display: block;
     color: #000;
     margin-bottom: 1em;
+    padding-left: 1em;
     text-decoration: none;
+    .fa {
+      position: absolute;
+      font-size: 2em;
+      transform: translateX(-130%);
+    }
     &:hover {
       color: rgb(154, 154, 154);
     }
   }
-  .active{
+  .active {
     color: #c1272d;
   }
 }

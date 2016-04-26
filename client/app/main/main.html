@@ -2,21 +2,31 @@
 <div class='container'>
   <div class='row main-menu'>
 
-    <div class="col col-xs-4 col-sm-offset-3 col-sm-2">
+    <div class="col col-xs-3 col-sm-offset-2 col-sm-2">
       <a href="#" ui-sref="main.donar" ui-sref-active="active"><img src="assets/images/donar.png" alt=""/></a>
     </div>
 
-    <div class="col col-xs-4 col-sm-2">
+    <div class="col col-xs-3 col-sm-2">
       <a href="#" ui-sref="main.transporte" ui-sref-active="active"><img src="assets/images/transporte.png" alt=""/></a>
     </div>
 
-    <div class="col col-xs-4 col-sm-2">
+    <div class="col col-xs-3 col-sm-2">
       <a href="#" ui-sref="main.recibir" ui-sref-active="active"><img src="assets/images/recibir.png" alt=""/></a>
     </div>
+    <div class="col col-xs-3 col-sm-2">
+      <a href="#" ui-sref="main.proyectos" ui-sref-active="active"><img src="assets/images/proyecto.png" alt=""/></a>
+    </div>
+
   </div>
   <div class='row '>
 
     <div class="col col-sm-12 cnt">
+      <div class="welcome" ng-if="onHome()">
+        <h1>BIENVENIDO</h1>
+        <h4>Conoce qué donar cerca de tu ciudad y dónde se
+recibe directamente. Únete a nuevos proyectos
+de reconstrucción. Levantemos juntos a Ecuador.</h4>
+      </div>
       <div ui-view></div>
     </div>
   </div>

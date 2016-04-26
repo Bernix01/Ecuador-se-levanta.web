@@ -4,11 +4,13 @@
 
   class MainController {
 
-    constructor() {
+    constructor($state, $scope) {
+      $scope._s = $state;
+      $scope.onHome = () =>{
+        return $scope._s.$current.toString() === "main";
+      }
 
-      
     }
-
 
   }
   angular.module('ecuadorAyudaWebApp')
