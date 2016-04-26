@@ -28,17 +28,17 @@
 
     addBarebone() {
       this.place.wtgo.push({
-        name: "",
-        tel: "",
-        extra: "",
-        lat: "",
-        long: ""
+        name: '',
+        tel: '',
+        extra: '',
+        lat: '',
+        long: ''
       });
     }
 
     delete() {
-      this.$http.delete("/api/places/" + this._id).then(response => {
-        alert("Deleted!");
+      this.$http.delete('/api/places/' + this._id).then(response => {
+        alert('Deleted!');
         this.$state.go('^.lugarAdm');
       });
     }
@@ -50,11 +50,11 @@
       if (form.$valid) {
         if (this._id) {
           this.$http.put('/api/places/' + this._id, this.place).then(response => {
-            alert("Actualizado! :-)");
+            alert('Actualizado! :-)');
           });
         } else {
           this.$http.post('/api/places', this.place).then(response => {
-            alert("Agregado! :-)");
+            alert('Agregado! :-)');
           });
         }
       }

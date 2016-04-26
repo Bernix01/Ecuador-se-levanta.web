@@ -26,9 +26,11 @@ services: mongodb
 deploy:
   provider: azure_web_apps
   site: 'ecuadorayuda'
+  script: scripts/deploy.sh
   on:
      branch: release
   provider: azure_web_apps
   site: 'ecuadorayuda-dev'
+  script: scripts/deploy.sh
   on:
      branch: dev
