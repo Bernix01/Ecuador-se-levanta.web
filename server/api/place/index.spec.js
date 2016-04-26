@@ -58,7 +58,7 @@ describe('Place API Router:', function() {
 
     it('should route to place.controller.create', function() {
       routerStub.post
-        .withArgs('/', 'placeCtrl.create')
+        .withArgs('/', 'authService.hasRole.admin', 'placeCtrl.create')
         .should.have.been.calledOnce;
     });
 
@@ -68,7 +68,7 @@ describe('Place API Router:', function() {
 
     it('should route to place.controller.update', function() {
       routerStub.put
-        .withArgs('/:id', 'placeCtrl.update')
+        .withArgs('/:id', 'authService.hasRole.admin', 'placeCtrl.update')
         .should.have.been.calledOnce;
     });
 
@@ -78,7 +78,7 @@ describe('Place API Router:', function() {
 
     it('should route to place.controller.update', function() {
       routerStub.patch
-        .withArgs('/:id', 'placeCtrl.update')
+        .withArgs('/:id', 'authService.hasRole.admin', 'placeCtrl.update')
         .should.have.been.calledOnce;
     });
 
@@ -88,7 +88,7 @@ describe('Place API Router:', function() {
 
     it('should route to place.controller.destroy', function() {
       routerStub.delete
-        .withArgs('/:id', 'placeCtrl.destroy')
+        .withArgs('/:id', 'authService.hasRole.admin', 'placeCtrl.destroy')
         .should.have.been.calledOnce;
     });
 
