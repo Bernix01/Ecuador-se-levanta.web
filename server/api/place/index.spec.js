@@ -54,44 +54,4 @@ describe('Place API Router:', function() {
 
   });
 
-  describe('POST /api/places', function() {
-
-    it('should route to place.controller.create', function() {
-      routerStub.post
-        .withArgs('/', 'placeCtrl.create')
-        .should.have.been.calledOnce;
-    });
-
-  });
-
-  describe('PUT /api/places/:id', function() {
-
-    it('should route to place.controller.update', function() {
-      routerStub.put
-        .withArgs('/:id', 'placeCtrl.update')
-        .should.have.been.calledOnce;
-    });
-
-  });
-
-  describe('PATCH /api/places/:id', function() {
-
-    it('should route to place.controller.update', function() {
-      routerStub.patch
-        .withArgs('/:id', 'placeCtrl.update')
-        .should.have.been.calledOnce;
-    });
-
-  });
-
-  describe('DELETE /api/places/:id', function() {
-
-    it('should route to place.controller.destroy', function() {
-      routerStub.delete
-        .withArgs('/:id', 'placeCtrl.destroy')
-        .should.have.been.calledOnce;
-    });
-
-  });
-
 });

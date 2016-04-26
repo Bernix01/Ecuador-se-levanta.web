@@ -1,27 +1,35 @@
 <div class='container '>
 
+  <div class='row menu'>
+
+    <div class="col-sm-4 ">
+      <h3>
+        <a href="#" ui-sref="main.donar.centros">Centros de acopio</a>
+      </h3>
+
+    </div>
+    <div class="col-sm-4 ">
+
+      <h3>
+        <a href="#" ui-sref="main.donar.servicios">Servicios profesionales</a>
+      </h3>
+
+    </div>
+    <div class="col-sm-4 ">
+      <h3>
+        <a href="#" ui-sref="main.donar.donaciones">Donaciones económicas</a>
+      </h3>
+
+    </div>
+
+  </div>
   <div class='row '>
 
+    <div class='col-sm-12'>
 
-      <div class="col col-xs-5 col-sm-4 col-md-3 col-lg-3 menu" >
-        <h3><a href="#" ui-sref="main.donar.centros" >Centros de acopio</a></h3>
-        <hr>
+      <div ui-view></div>
 
-
-        <h3><a href="#" ui-sref="main.donar.servicios" >Servicios profesionales</a></h3>
-        <hr>
-        <h3><a href="#" ui-sref="main.donar.donaciones" >Donaciones económicas</a></h3>
-
-
-      </div>
-
-      <div class='col-lg-9 col-md-9 col-sm-8 col-xs-7 '>
-
-        <div ui-view>
-
-        </div>
-
-      </div>
+    </div>
   </div>
 
 </div>
