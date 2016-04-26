@@ -11,12 +11,13 @@
         socket.unsyncUpdates('place');
       });
       console.log(this._id);
-        if (this._id)
-          this.$http.get('/api/places/'+ this._id).then(response => {
-            console.log(response);
-            this.place = response.data;
-            this.socket.syncUpdates('place', this.place);
-          });
+      if (this._id) {
+        this.$http.get('/api/places/' + this._id).then(response => {
+          console.log(response);
+          this.place = response.data;
+          this.socket.syncUpdates('place', this.place);
+        });
+      }
     }
   }
 

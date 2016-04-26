@@ -10,7 +10,7 @@ describe('Component: LugarComponent', function () {
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($componentController, $rootScope) {
     scope = $rootScope.$new();
-    LugarComponent = $componentController('LugarComponent', {
+    LugarComponent = $componentController('lugaradm', {
       $scope: scope
     });
   }));
