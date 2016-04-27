@@ -39,8 +39,7 @@ h3 {
   font-weight: bold;
 }
 *{
-
-    transition: 200ms ease all;
+    transition: 100ms ease all;
 }
 hr {
   margin-top: 0;
@@ -60,6 +59,10 @@ hr {
 @import 'donar.servicios/donar.servicios.scss';
 @import 'lugar/lugar.scss';
 @import 'main.donar/main.donar.scss';
+@import 'main.proyectos.desechos/main.proyectos.desechos.scss';
+@import 'main.proyectos.social/main.proyectos.social.scss';
+@import 'main.proyectos.trabajo/main.proyectos.trabajo.scss';
+@import 'main.proyectos.vivienda/main.proyectos.vivienda.scss';
 @import 'main.transporte/main.transporte.scss';
 @import 'main/main.scss';
 @import 'proyectos/proyectos.scss';

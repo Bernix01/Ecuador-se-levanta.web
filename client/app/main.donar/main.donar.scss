@@ -1,16 +1,27 @@
 .menu {
   text-transform: uppercase;
-  padding-left: 1em;
+  margin-bottom: 1em;
   a {
     display: block;
     color: #000;
-    margin-bottom: 1em;
-    padding-left: 1em;
     text-decoration: none;
-    .fa {
-      position: absolute;
-      font-size: 2em;
-      transform: translateX(-130%);
+    h3 {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+      padding-left: 2em;
+      .fa {
+        position: absolute;
+        font-size: 1.6em;
+        top: 50%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @media (max-width: $screen-xs-max) {
+          font-size: 1.5em;
+        }
+      }
     }
     &:hover {
       color: rgb(154, 154, 154);
