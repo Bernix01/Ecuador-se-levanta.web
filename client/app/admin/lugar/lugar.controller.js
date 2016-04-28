@@ -32,7 +32,8 @@
         tel: '',
         extra: '',
         lat: '',
-        long: ''
+        long: '',
+        needs: this.appConfig.needs
       });
     }
 

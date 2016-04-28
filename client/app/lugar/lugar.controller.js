@@ -13,9 +13,12 @@
       console.log(this._id);
       if (this._id) {
         this.$http.get('/api/places/' + this._id).then(response => {
-          console.log(response);
           this.place = response.data;
           this.socket.syncUpdates('place', this.place);
+          var placescnt = document.getElementsByClassName("places");
+          var wrappedRes = angular.element(placescnt);
+
+          wrappedRes.masonry({ "itemSelector": ".place", "columnWidth": ".col-sm-4", "percentPosition": true });
         });
       }
     }
