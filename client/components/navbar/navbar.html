@@ -11,15 +11,32 @@
     </div>
     <div uib-collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav navbar-right">
-        <li ng-repeat="item in nav.menu" ui-sref-active="active">
-            <a ui-sref="{{item.state}}">{{item.title}}</a>
+        <li>
+          <a href="https://www.instagram.com/guayaquilselevanta">
+            <i class="fa fa-ig"></i>
+          </a>
         </li>
-        <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="admin">Admin</a></li>
+        <li>
+          <a href="https://www.facebook.com/guayaquilselevanta">
+            <i class="fa fa-fb"></i>
+          </a>
+        </li>
+        <li ng-repeat="item in nav.menu" ui-sref-active="active">
+          <a ui-sref="{{item.state}}">{{item.title}}</a>
+        </li>
+        <li ng-show="nav.isAdmin()" ui-sref-active="active">
+          <a ui-sref="admin">Admin</a>
+        </li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li ng-show="nav.isLoggedIn()"><p class="navbar-text">Hello {{ nav.getCurrentUser().name }}</p> </li>
-        <li ng-show="nav.isLoggedIn()"><a ui-sref="logout">Logout</a></li>
+        <li ng-show="nav.isLoggedIn()">
+          <p class="navbar-text">Ehlo
+            {{ nav.getCurrentUser().name }}</p>
+        </li>
+        <li ng-show="nav.isLoggedIn()">
+          <a ui-sref="logout">Logout</a>
+        </li>
       </ul>
     </div>
   </div>
