@@ -25,6 +25,10 @@ var PlaceSchema = new _mongoose2.default.Schema({
   htgo: {
     type: String,
     default: ''
+  },
+  z0: {
+    type: Boolean,
+    default: false
   }
 });
 exports.default = _mongoose2.default.model('Place', PlaceSchema);
