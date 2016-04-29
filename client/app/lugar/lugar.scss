@@ -13,8 +13,9 @@
 .place {
   transition: all 0.2s;
   perspective: 900px;
-  min-height: 200px;
-    .need {
+  min-height: 450px;
+  position: relative;
+  .need {
     margin-bottom: 1em;
     .ndicn {
       margin-right: 1em;
@@ -23,29 +24,48 @@
       display: inline-block;
     }
   }
+  .needs-front {
+    cursor: pointer;
+  }
+  .ndicn-front {
+    width: 20px;
+    margin-left: 0.3em;
+  }
   .back,
   .front {
-    width: 100%;
-    min-height: 100%;
-    padding: .7em;
+    position: absolute;
+    top: 0;
+    width: calc(100% - 30px);
+    margin: 1em;
+    min-height: calc(100% - 30px);
+    padding: 2em;
     backface-visibility: hidden;
     transform-style: preserve3d;
     transition: all 0.4s;
-    filter: drop-shadow(0 0 10px #eee);
+    filter: drop-shadow(0 0 4px #eee);
   }
   .front {
-    background: white;
+    background: #fefefe;
+    .more {
+      font-size: 1.3em;
+      position: absolute;
+      top: 2em;
+      right: 2em;
+    }
+    h4 {
+      padding-right: 1.3em;
+    }
   }
   .back {
-    background: white;
+    background: #fefefe;
   }
   .back {
     transform: rotateY(-180deg);
   }
-  .flipped .back {
-    transform: rotateY(0deg);
-  }
-  .flipped .front {
-    transform: rotateY(180deg);
-  }
+}
+.flipped .back {
+  transform: rotateY(0deg);
+}
+.flipped .front {
+  transform: rotateY(180deg);
 }

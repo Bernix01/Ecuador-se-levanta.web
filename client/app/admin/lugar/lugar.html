@@ -1,7 +1,6 @@
-<div class='container '>
+<div class='container lugarAdmin'>
   <header>
     <h1>
-      <a href="/"><i class="fa fa-home"></i></a>
       {{lugarctl._id ? "Editar "+lugarctl.place.name : "Agregar un nuevo lugar"}} <i class="fa fa-trash pull-right" ng-click="lugarctl.delete()" ng-show="lugarctl._id"></i></h1>
     <br>
   </header>
@@ -68,9 +67,13 @@
             Agregar</div>
         </div>
 
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="z0" ng-model="lugarctl.place.z0">Zona afectada</label>
+        </div>
       </div>
 
-      <button type='submit' class='btn btn-lg btn-default pull-right'>Enviar
+      <button type='submit' class='btn btn-lg btn-default pull-right'>{{lugarctl._id ? "Actualizar "+lugarctl.place.name : "Agregar"}}
       </button>
 
     </form>

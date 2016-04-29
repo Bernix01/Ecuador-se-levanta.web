@@ -3,22 +3,27 @@
 
   class LugarComponent {
 
-    constructor($http, $scope, socket, $stateParams) {
+    constructor($http, $scope, smoothScroll, socket, $stateParams) {
       this._id = $stateParams.id;
       this.$http = $http;
       this.socket = socket;
       $scope.$on('$destroy', function() {
         socket.unsyncUpdates('place');
       });
-      console.log(this._id);
+      this.smoothScroll = smoothScroll;
+      var options = {
+        duration: 500,
+        easing: 'easeInQuad',
+        offset: 30,
+        containerId: 'custom-container-id'
+      }
+
       if (this._id) {
         this.$http.get('/api/places/' + this._id).then(response => {
-          this.place = response.data;
+          $scope.place = response.data;
           this.socket.syncUpdates('place', this.place);
-          var placescnt = document.getElementsByClassName("places");
-          var wrappedRes = angular.element(placescnt);
-
-          wrappedRes.masonry({ "itemSelector": ".place", "columnWidth": ".col-sm-4", "percentPosition": true });
+          var element = document.getElementById('place');
+          this.smoothScroll(element,options);
         });
       }
     }
