@@ -1,15 +1,17 @@
-.c {
-  width: 40%;
-  margin-left: 5%;
-  float: left;
-}
-.place {
-  padding: 1em;
-}
-.icn {
-  width: 26px;
-}
-.admPlace {
-  box-shadow: 0 0 5px 1px #D2D2D2;
-  padding: 1em;
+.lugarAdmin {
+  .c {
+    width: 40%;
+    margin-left: 5%;
+    float: left;
+  }
+  .place {
+    padding: 1em;
+  }
+  .icn {
+    width: 26px;
+  }
+  .admPlace {
+    box-shadow: 0 0 5px 1px #D2D2D2;
+    padding: 1em;
+  }
 }

@@ -18,7 +18,7 @@
         var self = this;
         this.$http.get('/api/places/' + this._id).then(response => {
           this.place = response.data;
-        },function(data, status) {
+        }, function(data, status) {
           self.$state.go('^.lugarAdm');
         });
       } else {
@@ -32,7 +32,8 @@
         tel: '',
         extra: '',
         lat: '',
-        long: ''
+        long: '',
+        needs: this.appConfig.needs
       });
     }
 
@@ -49,15 +50,29 @@
     submit(form) {
       if (form.$valid) {
         if (this._id) {
+          this.updateModel(this.place);
           this.$http.put('/api/places/' + this._id, this.place).then(response => {
             alert('Actualizado! :-)');
           });
         } else {
           this.$http.post('/api/places', this.place).then(response => {
             alert('Agregado! :-)');
+            this.$state.go('^.editPlace', {
+              id: response.data._id
+            });
           });
         }
       }
+    }
+    updateModel(place) {
+      place.wtgo.forEach((el) => {
+        if (el.needs === undefined) {
+          el.needs = this.appConfig.needs;
+        }
+        if(el.z0 === undefined){
+          el.z0 = false;
+        }
+      });
     }
   }
 

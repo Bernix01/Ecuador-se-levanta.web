@@ -3,9 +3,9 @@
   <div class='row '>
 
     <div class='col-sm-4 col-md-3 centros'>
-      <h2>CIUDADES</h2>
+      <h2>Zonas afectadas</h2>
       <hr>
-      <a href="#" ng-repeat="place in vm.places | filter: {z0:false}" ui-sref="main.donar.centros.ubicacion({id:'{{place._id}}'})" ui-sref-active="active">
+      <a href="#" ng-repeat="place in vm.places | filter: {z0:true}" ui-sref="main.recibir.ubicacion({id:'{{place._id}}'})" ui-sref-active="active">
         <h4>
           {{place.name}}</h4>
       </a>

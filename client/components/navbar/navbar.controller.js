@@ -2,10 +2,7 @@
 
 class NavbarController {
   //start-non-standard
-  menu = [{
-    'title': 'Iniciar sesión',
-    'state': 'login'
-  }];
+  menu = [];
 
   isCollapsed = true;
   //end-non-standard
