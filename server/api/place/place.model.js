@@ -17,6 +17,10 @@ var PlaceSchema = new mongoose.Schema({
   htgo: {
     type: String,
     default: ''
+  },
+  z0: {
+    type: Boolean,
+    default: false
   }
 });
 export default mongoose.model('Place', PlaceSchema);

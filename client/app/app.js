@@ -10,7 +10,8 @@ angular.module('ecuadorAyudaWebApp', [
     'btford.socket-io',
     'ui.router',
     'ui.bootstrap',
-    'validation.match'
+    'validation.match',
+    'smoothScroll'
   ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

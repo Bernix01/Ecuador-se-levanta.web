@@ -1,7 +1,6 @@
-<div class='container '>
+<div class='container lugarAdmin'>
   <header>
     <h1>
-      <a href="/"><i class="fa fa-home"></i></a>
       {{lugarctl._id ? "Editar "+lugarctl.place.name : "Agregar un nuevo lugar"}} <i class="fa fa-trash pull-right" ng-click="lugarctl.delete()" ng-show="lugarctl._id"></i></h1>
     <br>
   </header>
@@ -27,24 +26,6 @@
           <input type='number' id="name" class='form-control input-lg' placeholder='latitud' ng-model="lugarctl.place.lat">
         </div>
       </div>
-
-      <div class='form-group'>
-        <label for='name' class="col-sm-2 control-label">Qué se necesita</label>
-        <div class="col-sm-offset-2 col-sm-10">
-
-          <div class="checkbox" ng-repeat="need in lugarctl.place.needs">
-            <label>
-              <img src="" ng-src="{{need.image}}" class="icn" alt="{{need.name}}"/>
-              <input type="checkbox" value="" ng-model="need.state">
-              {{need.name}}
-              <br>
-              <textarea name="detail" class="form-control" rows="8" cols="40" ng-show="need.state" ng-model="need.detail"></textarea>
-            </label>
-          </div>
-
-        </div>
-      </div>
-
       <div class='form-group'>
         <label for='name' class="col-sm-2 control-label">Cómo llegar</label>
         <div class="col-sm-10">
@@ -68,6 +49,15 @@
               <input type='text' class='form-control input-sm c' placeholder="Long" ng-model="place.long">
               <input type='text' class='form-control input-sm c' placeholder='Lat' ng-model="place.lat">
               <div class="clearfix"></div>
+              <div class="checkbox" ng-repeat="need in place.needs">
+                <label>
+                  <img src="" ng-src="{{need.image}}" class="icn" alt="{{need.name}}"/>
+                  <input type="checkbox" value="" ng-model="need.state">
+                  {{need.name}}
+                  <br>
+                  <textarea name="detail" class="form-control" rows="8" cols="40" ng-show="need.state" ng-model="need.detail"></textarea>
+                </label>
+              </div>
             </div>
 
           </div>
@@ -77,9 +67,13 @@
             Agregar</div>
         </div>
 
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="z0" ng-model="lugarctl.place.z0">Zona afectada</label>
+        </div>
       </div>
 
-      <button type='submit' class='btn btn-lg btn-default pull-right'>Enviar
+      <button type='submit' class='btn btn-lg btn-default pull-right'>{{lugarctl._id ? "Actualizar "+lugarctl.place.name : "Agregar"}}
       </button>
 
     </form>

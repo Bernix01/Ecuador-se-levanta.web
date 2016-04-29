@@ -1,0 +1,22 @@
+.centros{
+  a{
+    display: block;
+    color: #000000;
+    margin-bottom: .3em;
+    text-decoration: none;
+    &:hover{
+      font-weight: bold;
+      text-decoration: none;
+    }
+    &:focus{
+
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+  }
+  .active{
+    font-weight: bold;
+    color: #c1272d;
+  }
+}
