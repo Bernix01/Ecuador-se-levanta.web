@@ -11,10 +11,6 @@
     </div>
     <div uib-collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav navbar-right">
-        <li ng-hide="nav.isLoggedIn()" ui-sref-active="active">
-          <a ui-sref="login">Iniciar sesión</a>
-        </li>
-
           <li ng-show="nav.isLoggedIn()">
         <p class="navbar-text">Ehlo
           {{ nav.getCurrentUser().name }}</p>
@@ -26,7 +22,7 @@
     <ul class="nav navbar-nav navbar-right">
       <li>
         <a href="https://www.instagram.com/guayaquilselevanta">
-          <i class="fa fa-instagram"></i>
+          <i class="fa fa-2X fa-instagram"></i>
         </a>
       </li>
       <li>
@@ -40,8 +36,14 @@
       <li ng-show="nav.isAdmin()" ui-sref-active="active">
         <a ui-sref="admin.lugarAdm">Admin</a>
       </li>
-    </ul>
-
+    </ul><span style="
+    display: block;
+    position: absolute;
+    bottom: .3em;
+    right: 2em;
+    font-size: .7em;
+">
+#desafioecuador    #ayudaecuador</span>
   </div>
 </div>
 </div>

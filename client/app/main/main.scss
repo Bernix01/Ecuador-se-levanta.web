@@ -31,12 +31,12 @@
 .cnt {
   padding-bottom: 5vh;
 }
-.welcome{
+.welcome {
   text-align: center;
-  h1{
+  h1 {
     text-align: center;
   }
-  h4{
+  h4 {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
@@ -64,6 +64,15 @@
       > a {
         padding-top: 35px;
         padding-bottom: 35px;
+        .fa {
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          color: #fff;
+          
+        }
       }
       > .navbar-text {
         font-weight: bold;
