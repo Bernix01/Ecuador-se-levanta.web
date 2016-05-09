@@ -53,6 +53,7 @@
   }
   .navbar-collapse {
     border-top: 0;
+    position: relative;
   }
   .navbar-brand {
     img {
@@ -71,7 +72,7 @@
           line-height: 30px;
           text-align: center;
           color: #fff;
-          
+
         }
       }
       > .navbar-text {
