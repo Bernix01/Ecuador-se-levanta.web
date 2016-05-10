@@ -4,32 +4,32 @@
 
     <div class="col-sm-5 col-md-4 col-lg-3 ">
 
-        <a href="#" ui-sref="main.donar.centros" ui-sref-active="active"><h4><img src="assets/images/icn1.png" alt="" /> VIVIENDA E INFRAESTRUCTURA</h4></a>
+        <a href="#" ng-click="active = data[0]"><h4><img src="assets/images/icn1.png" alt="" /> VIVIENDA E INFRAESTRUCTURA</h4></a>
 
 
     </div>
     <div class="col-sm-4 col-sm-offset-2 col-md-offset-0  col-md-2 col-lg-2">
 
 
-        <a href="#" ui-sref="main.donar.servicios" ui-sref-active="active"><h4> <img src="assets/images/icn2.png" alt="" />  SOCIAL</h4></a>
+        <a href="#" ng-click="active = data[1]"><h4> <img src="assets/images/icn2.png" alt="" />  SOCIAL</h4></a>
 
 
     </div>
     <div class="col-sm-5 col-md-4 col-lg-3">
 
-        <a href="#" ui-sref="main.donar.donaciones" ui-sref-active="active"><h4><img src="assets/images/icn3.png" alt="" /> EMPRENDIMIENTO Y CAPACITACION</h4></a>
+        <a href="#" ng-click="active = data[2]"><h4><img src="assets/images/icn3.png" alt="" /> EMPRENDIMIENTO Y CAPACITACION</h4></a>
 
 
     </div>
     <div class="col-sm-4 col-md-2 col-sm-offset-2 col-md-offset-0 col-lg-2">
 
-        <a href="#" ui-sref="main.donar.donaciones" ui-sref-active="active"><h4><img src="assets/images/icn4.png" alt="" /> SALUD</h4></a>
+        <a href="#" ng-click="active = data[3]"><h4><img src="assets/images/icn4.png" alt="" /> SALUD</h4></a>
 
 
     </div>
     <div class="col-sm-4 col-md-2 col-md-offset-5 col-lg-offset-0 col-lg-2">
 
-        <a href="#" ui-sref="main.donar.donaciones" ui-sref-active="active"><h4><img src="assets/images/icn5.png" alt="" />ANIMALES</h4></a>
+        <a href="#" ng-click="active = data[4]"><h4><img src="assets/images/icn5.png" alt="" />ANIMALES</h4></a>
 
 
     </div>
@@ -38,8 +38,8 @@
   <div class='row '>
 
     <div class='col-sm-12'>
-
-      <div ui-view></div>
+      <img src="" ng-src="{{active.img}}" class="icn" alt="" />
+<h4 class="">{{active.info}}</h4>
 
     </div>
   </div>
