@@ -35,5 +35,6 @@
   },
   "_source": "https://github.com/d-oliveros/angular-smooth-scroll.git",
   "_target": "^2.0.0",
-  "_originalSource": "ngSmoothScroll"
+  "_originalSource": "ngSmoothScroll",
+  "_direct": true
 }

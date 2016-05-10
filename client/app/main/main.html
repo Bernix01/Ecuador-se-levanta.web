@@ -3,7 +3,7 @@
   <div class='row main-menu'>
 
     <div class="col col-xs-4 col-sm-offset-3 col-sm-2">
-      <a href="#" ui-sref="main.donar" ui-sref-active="active"><img src="assets/images/donar.png" alt=""/></a>
+      <a href="#" ui-sref="main.proyectos" ui-sref-active="active"><img src="assets/images/donar.png" alt=""/></a>
     </div>
 
     <div class="col col-xs-4 col-sm-2">
@@ -17,17 +17,20 @@
   <div class='row '>
 
     <div class="col col-sm-12 cnt">
-      <div class="welcome" ng-if="onHome()">
+      <div class="welcome text-center" ng-if="onHome()">
         <h2>¿QUIÉNES SOMOS?</h2>
-        <h4>Somos un grupo de jóvenes ecuatorianos solidarios, con la voluntad de ayudar a los que más necesitan, canalizando recursos de toda la sociedad civil que desee unirse y desarrollar proyectos sustentables a largo plazo trabajando en conjunto con ONGS y gobierno local.</h2>
-          <h2>Historia</h2>
-          <h4>
-El pasado 16 de Abril de 2016, Ecuador sufrió el terremoto más fuerte y destructivo de su historia, dejando devastadas varias zonas del país, en especial poblaciones de Manabí y Esmeraldas. Muchos ecuatorianos nos movilizamos inmediatamente con la voluntad de ayudar, desde instituciones y ciudadanos estuvimos presentes. Después de 14 días del terremoto, entre los escombros de Jama, los hermanos de “Desafío Levantemos Chile”, nos compartieron información y conocimiento de su vivencia; de esa experiencia nace la necesidad de crear “Desafío Ecuador”, para unificar todas las iniciativas en una más fuerte, coordinada y ejecutable de manera eficiente.
-</h4>
-<img src="assets/images/someone.png" alt="" />
-<h4>Roberto Manrique</h4>
-<h2>Con la psrticipación de</h2>
-<img src="assets/images/kahre.png" alt="" />
+        <h4 class="text-justify">Somos un grupo de jóvenes ecuatorianos solidarios, con la voluntad de ayudar a los que más necesitan, canalizando recursos de toda la sociedad civil que desee unirse y desarrollar proyectos sustentables a largo plazo trabajando en conjunto con
+          ONGS y gobierno local.</h2>
+        <h2>Historia</h2>
+        <h4 class="text-justify">
+          El pasado 16 de Abril de 2016, Ecuador sufrió el terremoto más fuerte y destructivo de su historia, dejando devastadas varias zonas del país, en especial poblaciones de Manabí y Esmeraldas. Muchos ecuatorianos nos movilizamos inmediatamente con la
+          voluntad de ayudar, desde instituciones y ciudadanos estuvimos presentes. Después de 14 días del terremoto, entre los escombros de Jama, los hermanos de “Desafío Levantemos Chile”, nos compartieron información y conocimiento de su vivencia; de esa
+          experiencia nace la necesidad de crear “Desafío Ecuador”, para unificar todas las iniciativas en una más fuerte, coordinada y ejecutable de manera eficiente.
+        </h4>
+        <img class="text-center" src="assets/images/someone.png" alt=""/>
+        <h4 class="text-center">Roberto Manrique</h4>
+        <h2 class="text-center">Con la participación de</h2>
+        <img class="text-center" src="assets/images/kahre.png" alt=""/>
       </div>
 
       <div ui-view></div>

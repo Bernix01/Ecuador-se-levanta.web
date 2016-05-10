@@ -4,7 +4,7 @@ angular.module('ecuadorAyudaWebApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('main.proyectos', {
-        url: 'proyectos',
+        url: '',
         template: '<proyectos></proyectos>'
       });
   });
