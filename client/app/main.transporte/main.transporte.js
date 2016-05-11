@@ -3,7 +3,7 @@
 angular.module('ecuadorAyudaWebApp')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('main.proyectostransporte', {
+      .state('main.proyectos.transporte', {
         url: 'donar',
         template: '<donar></donar>'
       });
