@@ -15,8 +15,9 @@ import fs from 'fs';
 
 function respondWithResult(res, err, files, statusCode) {
   statusCode = statusCode || 200;
-
-
+  console.log(
+    files
+  );
     if (files) {
       res.status(statusCode).json(files).end();
     }
