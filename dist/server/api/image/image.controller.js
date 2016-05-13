@@ -34,7 +34,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function respondWithResult(res, err, files, statusCode) {
   statusCode = statusCode || 200;
-
+  console.log(files);
   if (files) {
     res.status(statusCode).json(files).end();
   }
