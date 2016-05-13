@@ -76,7 +76,7 @@ function handleError(res, statusCode) {
 
 // Gets a list of Images
 function index(req, res) {
-  return _fs2.default.readdir('./client/assets/images/gallery/', function (err, files) {
+  return _fs2.default.readdir('../client/assets/images/gallery/', function (err, files) {
     if (err) {
       console.log(err);
       return respondWithResult(res, err, files, 500);

@@ -61,7 +61,7 @@ function handleError(res, statusCode) {
 
 // Gets a list of Images
 export function index(req, res) {
-  return fs.readdir('./client/assets/images/gallery/', function(err, files) {
+  return fs.readdir('../client/assets/images/gallery/', function(err, files) {
     if (err) {
       console.log(err);
       return respondWithResult(res, err, files, 500);
