@@ -20,7 +20,7 @@ _user2.default.find({}).remove().then(function () {
     provider: 'local',
     role: 'admin',
     name: 'radmin',
-    email: 'radmin@ecuadorselevanta.com',
+    email: 'radmin@desafioecuador.com',
     password: 'qwasdf@zxc'
   }).then(function () {
     console.log('finished populating users');

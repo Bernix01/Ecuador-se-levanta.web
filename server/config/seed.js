@@ -13,7 +13,7 @@ User.find({}).remove()
       provider: 'local',
       role: 'admin',
       name: 'radmin',
-      email: 'radmin@ecuadorselevanta.com',
+      email: 'radmin@desafioecuador.com',
       password: 'qwasdf@zxc'
     })
     .then(() => {
