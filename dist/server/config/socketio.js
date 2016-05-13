@@ -71,6 +71,7 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/image/image.socket').register(socket);
   require('../api/que-se-ofrece/que-se-ofrece.socket').register(socket);
   require('../api/place/place.socket').register(socket);
   require('../api/thing/thing.socket').register(socket);

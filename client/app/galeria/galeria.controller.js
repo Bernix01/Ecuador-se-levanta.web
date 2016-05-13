@@ -1,19 +1,21 @@
 'use strict';
-(function(){
+(function() {
 
-class GaleriaComponent {
-  constructor($http) {
-    $htpp.get('api/images').then(response => {
-      this.images = response.data;
-    })
+  class GaleriaComponent {
+    constructor($http, socket, $scope) {
+      this.$http = $http;
+      this.$http.get('api/images').then(response => {
+        this.images = response.data;
+        console.log(response.data);
+      })
+    }
   }
-}
 
-angular.module('ecuadorAyudaWebApp')
-  .component('galeria', {
-    templateUrl: 'app/galeria/galeria.html',
-    controller: GaleriaComponent,
-    controlleras: 'vm'
-  });
+  angular.module('ecuadorAyudaWebApp')
+    .component('galeria', {
+      templateUrl: 'app/galeria/galeria.html',
+      controller: GaleriaComponent,
+      controllerAs: 'vm'
+    });
 
 })();

@@ -11,7 +11,8 @@ angular.module('ecuadorAyudaWebApp', [
     'ui.router',
     'ui.bootstrap',
     'validation.match',
-    'smoothScroll'
+    'smoothScroll',
+    'ngFileUpload'
   ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

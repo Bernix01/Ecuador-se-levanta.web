@@ -11,14 +11,15 @@
 
 import _ from 'lodash';
 import Image from './image.model';
+import fs from 'fs';
 
-function respondWithResult(res, statusCode) {
+function respondWithResult(res, err, files, statusCode) {
   statusCode = statusCode || 200;
-  return function(entity) {
-    if (entity) {
-      res.status(statusCode).json(entity);
+
+
+    if (files) {
+      res.status(statusCode).json(files).end();
     }
-  };
 }
 
 function saveUpdates(updates) {
@@ -61,9 +62,13 @@ function handleError(res, statusCode) {
 
 // Gets a list of Images
 export function index(req, res) {
-  return Image.find().exec()
-    .then(respondWithResult(res))
-    .catch(handleError(res));
+  return fs.readdir('./client/assets/images/gallery/', function(err, files) {
+    if (err) {
+      return respondWithResult(res, err, files, 500);
+    }
+    console.log(files.length);
+    return respondWithResult(res, err, files);
+  });
 }
 
 // Gets a single Image from the DB
