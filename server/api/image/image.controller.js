@@ -18,9 +18,7 @@ function respondWithResult(res, err, files, statusCode) {
   console.log(
     files
   );
-    if (files) {
       res.status(statusCode).json(files).end();
-    }
 }
 
 function saveUpdates(updates) {
@@ -65,6 +63,7 @@ function handleError(res, statusCode) {
 export function index(req, res) {
   return fs.readdir('./client/assets/images/gallery/', function(err, files) {
     if (err) {
+      console.log(err);
       return respondWithResult(res, err, files, 500);
     }
     console.log(files.length);

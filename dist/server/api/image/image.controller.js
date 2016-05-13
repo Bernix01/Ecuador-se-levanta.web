@@ -35,9 +35,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function respondWithResult(res, err, files, statusCode) {
   statusCode = statusCode || 200;
   console.log(files);
-  if (files) {
-    res.status(statusCode).json(files).end();
-  }
+  res.status(statusCode).json(files).end();
 }
 
 function saveUpdates(updates) {
@@ -80,6 +78,7 @@ function handleError(res, statusCode) {
 function index(req, res) {
   return _fs2.default.readdir('./client/assets/images/gallery/', function (err, files) {
     if (err) {
+      console.log(err);
       return respondWithResult(res, err, files, 500);
     }
     console.log(files.length);
