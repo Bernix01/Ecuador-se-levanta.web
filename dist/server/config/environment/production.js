@@ -13,9 +13,6 @@ module.exports = {
   // MongoDB connection options
   mongo: {
     uri: process.env.DB_URI
-  },
-
-  // Seed database on startup
-  seedDB: true
+  }
 };
 //# sourceMappingURL=production.js.map
